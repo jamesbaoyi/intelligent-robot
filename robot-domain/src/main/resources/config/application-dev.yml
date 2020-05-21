@@ -1,0 +1,25 @@
+server:
+  port: 9000
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://192.168.3.2:3506/robot_new?useUnicode=true&characterEncoding=utf8&useSSL=false&rewriteBatchedStatements=true
+    name:
+    username: mysql
+    password: 123456
+    hikari:
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+      maximumPoolSize: 50
+  redis:
+    database: 4
+    host: 106.13.55.213
+    port: 6379
+    password: zw123456
+    timeout: 6000
+  jpa:
+    hibernate:
+      ddl-auto: update
